@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 2</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 2</h1>
+					<p>
+						Задача 2. Дано рік народження (дата: 1 січня) та поточний рік. Знайти кількість років.
+					</p>
+				</section>
+				<script> 
+const dateOfBirth = parseInt(prompt("Введіть рік народження"));
+const date = new Date().getFullYear();
+const userAgeResult = date - dateOfBirth;
+console.log(userAgeResult);
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

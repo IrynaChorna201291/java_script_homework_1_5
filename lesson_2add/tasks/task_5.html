@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 2</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 5</h1>
+					<p>
+						Визначити, яку платню одержить на фірмі сумісник за виконану роботу, якщо йому нараховано S грн., а податок становить 20%.
+
+					</p>
+				</section>
+				<script> 
+				const S = parseFloat(prompt("Введіть розмір отриманої платні"));
+const tax = 0.2;
+const payrollTax = S * tax;
+const salaryResult = S - payrollTax;
+console.log(salaryResult);
+document.write(`Заробітня платня: ${S} грн <br>
+податок 20% :${payrollTax} грн <br>
+Після сплати податку заробітня плата становить: ${salaryResult} грн`);
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

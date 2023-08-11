@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 2</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 6</h1>
+					<p>
+						Дано три дійсні змінні a, b і c. Скласти алгоритм, який міняє місцями значення цих змінних наступним чином: змінна a набуває значення змінної b, змінна b набуває значення змінної c, а змінна c – попереднє значення змінної a.
+
+					</p>
+				</section>
+				<script> 
+
+let a = parseInt(prompt("Введіть значення змінної а")); //b
+let b = parseInt(prompt("Введіть значення змінної b")); //c
+let c = parseInt(prompt("Введіть значення змінної c")); //a
+document.write(`
+<div>значення змінних</div>
+<div>a = ${a}</div>
+<div>b = ${b}</div>
+<div>c = ${c}</div>
+`);
+let d = a;
+a = b;
+b = c;
+c = d;
+
+document.write(`
+<div>НОВІ значення</div>
+<div>a = ${a}</div>
+<div>b = ${b}</div>
+<div>c = ${c}</div>
+`);
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

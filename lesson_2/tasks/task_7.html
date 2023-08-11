@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 2</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 7</h1>
+					<p>
+						Задача 7. Знайти суму випадкового номера місяця (від 1 до 12) та випадкового номера дня (від 0 до 6).
+
+					</p>
+				</section>
+				<script> 
+const minMonthNumber = 1;
+const maxMonthNumber = 12;
+const minDayNumber = 0;
+const maxDayNumber = 6;
+const randomMonthNumber =
+  minMonthNumber +
+  Math.floor(Math.random() * (maxMonthNumber - minMonthNumber + 1));
+console.log(randomMonthNumber);
+const randomDayNumber =
+  minDayNumber + Math.floor(Math.random() * (maxDayNumber - minDayNumber + 1));
+console.log(randomDayNumber);
+const sum = randomMonthNumber + randomDayNumber;
+console.log(sum);
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

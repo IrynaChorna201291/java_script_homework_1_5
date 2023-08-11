@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 2</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 6</h1>
+					<p>
+						Задача 6. З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.
+					</p>
+				</section>
+				<script> 
+const itemPriceProduct_1 = parseFloat(prompt("Введіть вартість товару №1"));
+const numberProduct_1 = parseInt(prompt("Введіть кількість товару №1"));
+const itemPriceProduct_2 = parseFloat(prompt("Введіть вартість товару №2"));
+const numberProduct_2 = parseInt(prompt("Введіть кількість товару №2"));
+const itemPriceProduct_3 = parseFloat(prompt("Введіть вартість товару №3"));
+const numberProduct_3 = parseInt(prompt("Введіть кількість товару №3"));
+const totalPriceProduct_1 = itemPriceProduct_1 * numberProduct_1;
+console.log(totalPriceProduct_1);
+const totalPriceProduct_2 = itemPriceProduct_2 * numberProduct_2;
+console.log(totalPriceProduct_2);
+const totalPriceProduct_3 = itemPriceProduct_3 * numberProduct_3;
+console.log(totalPriceProduct_3);
+const totalSum =
+  totalPriceProduct_1 + totalPriceProduct_2 + totalPriceProduct_3;
+console.log(totalSum);
+document.write(`<table border='2px'>`);
+document.write(`<thead><tr>`);
+document.write("<th>Товар</th>");
+document.write("<th>Вартість одиниці</th>");
+document.write("<th>Кількість</th>");
+document.write("<th>Загальна вартість</th>");
+document.write(`</tr></thead>`);
+document.write("<tbody>");
+document.write("<tr>");
+document.write(`<td>товар 1</td>`);
+document.write(`<td>${itemPriceProduct_1}</td>`);
+document.write(`<td>${numberProduct_1}</td>`);
+document.write(`<td>${totalPriceProduct_1}</td>`);
+document.write("</tr>");
+document.write("<tr>");
+document.write(`<td>товар 2</td>`);
+document.write(`<td>${itemPriceProduct_2}</td>`);
+document.write(`<td>${numberProduct_2}</td>`);
+document.write(`<td>${totalPriceProduct_2}</td>`);
+document.write("</tr>");
+document.write("<tr>");
+document.write(`<td>товар 3</td>`);
+document.write(`<td>${itemPriceProduct_3}</td>`);
+document.write(`<td>${numberProduct_3}</td>`);
+document.write(`<td>${totalPriceProduct_3}</td>`);
+document.write("</tr>");
+document.write("<tr>");
+document.write(`<td>чек</td>`);
+document.write(`<td>${totalSum}</td>`);
+document.write(`</tr>`);
+document.write(`</tbody></table>`);
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

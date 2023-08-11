@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 3</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 2</h1>
+					<p>
+						З клавіатури вводиться ціна товару і кількість грошей. Якщо грошей не вистачає то відмовляємо у покупці, інакше, якщо ще залишаються гроші, то пропонуємо купити лотерею за 4 грн.
+
+					</p>
+				</section>
+				<script> 
+
+ const productPrice = parseFloat(prompt("Введіть ціну товару"));
+const userMoney = parseFloat(prompt("Введіть наявну кількість грошей"));
+const lotoTicket = 4;
+if (userMoney < productPrice)
+  document.write("У вас недостатньо коштів для покупки");
+else if (userMoney >= productPrice + lotoTicket)
+  document.write(
+    `Додатково ви можете купити лотерейний квиток за ${lotoTicket} грн`
+  );
+else document.write("Вітаю з покупкою товару");
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

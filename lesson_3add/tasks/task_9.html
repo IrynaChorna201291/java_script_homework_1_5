@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 3 add</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 9</h1>
+					<p>
+						// Задача 9. З клавіатури вводиться перша літера розширення файлу («html», «doc», «jpeg», «mp3», «xls»). Вивести на екран назву програми, яка може відкрити цей тип файлу.
+
+					</p>
+				</section>
+				<script> 
+
+const firstLetterNameFile = prompt("Введіть першу літеру розширення файлу");
+let result;
+switch (firstLetterNameFile) {
+  case "h":
+    result = "«html»";
+    break;
+  case "d":
+    result = "«doc»";
+    break;
+  case "j":
+    result = "«jpeg»";
+    break;
+  case "m":
+    result = "«mp3»";
+    break;
+  case "x":
+    result = "«xls»";
+    break;
+}
+document.write(result);
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

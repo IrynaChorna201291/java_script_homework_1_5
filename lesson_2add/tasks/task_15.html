@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 2</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 15</h1>
+					<p>
+						З клавіатури вводиться кількість місяців, які пройшли від деякого моменту часу. Вивести повну кількість років і місяців. Наприклад, дано 28 місяців, а вивести 2 роки і 4 місяці.
+
+					</p>
+				</section>
+				<script> 
+
+const userMonthNumber = parseInt(prompt("Введіть кількість місяців"));
+const monthInYear = 12;
+const fullYearNumber = Math.floor(userMonthNumber / monthInYear);
+const fullMonthNumber = userMonthNumber % monthInYear;
+document.write(`Дано ${userMonthNumber} місяців це:<br>
+${fullYearNumber} роки ${fullMonthNumber} місяці`);
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

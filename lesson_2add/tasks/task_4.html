@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 2</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 4</h1>
+					<p>
+						З клавіатури вводиться вік дитини. Вивести на екран через скільки років вона буде відвідувати садочок, піде у школу, закінчить школу, вступить і закінчить
+
+					</p>
+				</section>
+				<script> 
+				// //вводимо необхідні дані
+const childAge = parseInt(prompt("Введіть вік дитини"));
+const minAgeStartChildGarden = 2;
+const minAgeStartSchool = 6;
+const ageFinishSchool = 18;
+const minAgeStartUniversity = 18;
+const ageFinishUniversity = 23;
+//знаходимо результат
+const yearNumberStartChildGarden = minAgeStartChildGarden - childAge;
+const yearNumberStartSchool = minAgeStartSchool - childAge;
+const yearNumberFinishSchool = ageFinishSchool - childAge;
+const yearNumberStartUniversity = minAgeStartUniversity - childAge;
+const yearNumberFinishUniversity = ageFinishUniversity - childAge;
+//виводимо результат
+document.write(`Вік дитини ${childAge} років <br>`);
+document.write(`Через ${yearNumberStartChildGarden} років піде у садочок <br>`);
+document.write(`Через ${yearNumberStartSchool} років піде до школи <br>`);
+document.write(`Через ${yearNumberFinishSchool} років закінчить школу <br>`);
+document.write(
+  `Через ${yearNumberStartUniversity} років піде до університету <br>`
+);
+document.write(
+  `Через ${yearNumberFinishUniversity} років закінчить университет <br>`
+);
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

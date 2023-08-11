@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 3 add</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 5</h1>
+					<p>
+						// Задача 5. Модифікувати попередню задачу з можливістю після пострілу переміщення корабля у випадковим чином вибрану сусідню клітинку (якщо звичайно корабель не було потоплено за першим разом).
+
+					</p>
+				</section>
+				<script> 
+
+const squareNumber = parseInt(prompt("Enter number of squares"));
+const minSquares = 1;
+let shipPosition =
+  minSquares + Math.floor(Math.random() * (squareNumber - minSquares + 1));
+const randomValue = Math.round(Math.random());
+
+let shipMove;
+
+if (shipPosition === 1) shipMove = 1;
+else {
+  if (shipPosition === squareNumber) shipMove = -1;
+  else if (randomValue === 1) shipMove = 1;
+  else shipMove = -1;
+}
+console.log(shipPosition);
+
+let shotPosition = parseInt(prompt("Enter your 1st shot square"));
+let result;
+
+if (shotPosition === shipPosition) {
+  result = "You Win";
+} else {
+  if (Math.abs(shipPosition - shotPosition) === 1) result = "Ship is damaged";
+  else result = "Missed";
+  shipPosition = shipPosition + shipMove;
+  console.log(shipPosition);
+  shotPosition = parseInt(prompt(`${result}, one more try`));
+  if (shotPosition === shipPosition) result = "You Win";
+  else if (Math.abs(shipPosition - shotPosition) === 1)
+    result = "Ship is damaged, you lose";
+  else result = "You lose";
+}
+document.write(result);
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

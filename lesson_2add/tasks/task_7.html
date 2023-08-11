@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 2</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 7</h1>
+					<p>
+						Скласти алгоритм, який обчислює цілу і дробову частину даного числа х. Наприклад: число 23,56 => ціла: 23, дробова: 0,56.
+
+					</p>
+				</section>
+				<script> 
+
+const userNumber = parseFloat(
+  prompt("Введіть число (цілу та дробову частину)")
+);
+const integerPartNumber = Math.floor(userNumber);
+const fractionalPartNumber = userNumber - integerPartNumber;
+document.write(`Дано число - ${userNumber} <br>
+Ціла частина - ${integerPartNumber} <br>
+Дробова частина - ${fractionalPartNumber.toFixed(2)}`);
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

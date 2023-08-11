@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 2</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 0</h1>
+					<p>
+						Задача 0. Обчислити значення виразів
+						S1=a+12+b <br>
+						S2=a+b2a <br>
+						S3=3(a+b)c <br>
+						S4=sin⁡(a-b) <br>
+					</p>
+				</section>
+				<script> 
+
+// вводимо необхідні дані
+const a = parseFloat(prompt("Введіть значення а = "));
+const b = parseFloat(prompt("Введіть значення b = "));
+const c = parseFloat(prompt("Введіть значення c = "));
+//знаходимо результат
+const s1 = a + 12 + b;
+const s2 = Math.sqrt((a + b) / (2 * a));
+const s3 = Math.cbrt((a + b) * c);
+const s4 = Math.sin(a / -b);
+//виводимо результат
+console.log(`s1 = ${s1}`);
+console.log(`s2 = ${s2.toFixed(2)}`);
+console.log(`s3 = ${s3.toFixed(2)}`);
+console.log(`s4 = ${s4.toFixed(2)}`);
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

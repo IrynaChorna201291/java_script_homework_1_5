@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 2</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 5</h1>
+					<p>
+						Задача 5. Дано кількість секунд, що пройшла від початку доби. Визначити скільки це годин і хвилин.
+
+					</p>
+				</section>
+				<script>
+const secundNumber = parseInt(prompt("Введіть кількість секунд"));
+const hourNumber = Math.floor(secundNumber / 3600);
+const minuteNumber = Math.floor((secundNumber % 3600) / 60);
+console.log(`${secundNumber} s це ${hourNumber} h ${minuteNumber} m`);
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

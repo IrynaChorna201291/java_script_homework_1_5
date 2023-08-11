@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 3 add</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 6</h1>
+					<p>
+						Задача 6. Полювання. Заєць знаходиться у верхньому лівому кутку поля. Поле складається з двох рядків і двох стовпців.
+						// За один крок заєць може стрибнути у будь-яку із вільних клітинок. Користувач ставить пастку вказуючи номер рядка і стовпця клітинки. Якщо заєць потрапляє у пастку, то користувач виграв і отримав 100 балів. Якщо користувач зловить зайця за другою спробою, то одержує 50 балів.
+
+					</p>
+				</section>
+				<script> 
+
+const minNumber = 1;
+const maxNumber = 2;
+const compRowNumber =
+  minNumber + Math.floor(Math.random() * (maxNumber - minNumber + 1));
+console.log(compRowNumber);
+const compColumnNumber =
+  minNumber + Math.floor(Math.random() * (maxNumber - minNumber + 1));
+console.log(compColumnNumber);
+const userRowNumberShot_1 = parseInt(prompt("Введіть номер рядка (1-2)"));
+const userColumnNumberShot_1 = parseInt(prompt("Введіть номер стовпця (1-2)"));
+let result;
+if (
+  userRowNumberShot_1 === compRowNumber &&
+  userColumnNumberShot_1 === compColumnNumber
+)
+  result = "ви виграли і отримали 100 балів";
+else {
+  alert("Не вчулили. спроба №2");
+  const userRowNumberShot_2 = parseInt(prompt("Введіть номер рядка (1-2)"));
+  const userColumnNumberShot_2 = parseInt(
+    prompt("Введіть номер стовпця (1-2)")
+  );
+  if (
+    userRowNumberShot_2 === compRowNumber &&
+    userColumnNumberShot_2 === compColumnNumber
+  )
+    result = "ви виграли і отримали 50 балів";
+  else result = "ви програли";
+}
+document.write(result);
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

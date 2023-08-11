@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 2</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 11</h1>
+					<p>
+						Дано поточну кількість годи, хвилин, секунд (як на годиннику). Визначити 1) яка кількість секунд буде на годиннику через N секунд.
+						2) яка кількість хвилин буде на годиннику через N секунд, X хвилин.
+
+					</p>
+				</section>
+				<script> 
+
+const secundNumber = parseInt(prompt("Введіть значення N (секунди)"));
+const minuteNumber = parseInt(prompt("Введіть значення X (хвилини)"));
+const secondInMinute = 60;
+let hours = new Date().getHours();
+let minutes = new Date().getMinutes();
+let seconds = new Date().getSeconds();
+const secundResult = (seconds + secundNumber) % secondInMinute;
+const minuteResult =
+  (Math.floor((secundNumber + seconds) / secondInMinute) +
+    minuteNumber +
+    minutes) %
+  secondInMinute;
+document.write(`початковий час: ${hours}:${minutes}:${seconds} <br>`);
+document.write(`на годиннику буде: ${secundResult} секунд<br>`);
+document.write(`на годиннику буде: ${minuteResult} хвилин<br>`);
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 2</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 14</h1>
+					<p>
+						З клавіатури вводиться номер дня тижня (від 1 до 7). Визначити який буде день тижня через N днів.
+
+					</p>
+				</section>
+				<script> 
+
+ const userDayNumber = parseInt(prompt("Введіть номер дня тижня (від 1 до 7)"));
+const N = parseInt(prompt("Введіть кількість днів"));
+const minNumDay = 1;
+const maxNumDay = 7;
+const weekDayNumber =
+  ((userDayNumber - minNumDay + N) % (maxNumDay - minNumDay + 1)) + minNumDay;
+document.write(`
+номер дня тижня (від 1 до 7): ${userDayNumber} <br>
+кількість днів: ${N} <br>
+буде день тижня: ${weekDayNumber}`);
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

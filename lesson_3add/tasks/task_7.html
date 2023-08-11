@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 3 add</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 7</h1>
+					<p>
+						Задача 7. Гра в кості. Правила гри:
+						// 1) користувач може кинути кості не більше двох разів (користувач сам вирішує чи робити, чи не робити другий кидок);
+						// 2) якщо випадає парне число, то кількість балів збільшується на це число;
+						// 3) якщо випадає непарне число, то кількість балів зменшується на це число;
+						// 4) виграє той, у кого кількість балів більша.
+					</p>
+				</section>
+				<script> 
+
+let attemptUser1 = parsInt(prompt("Player1 : Roll your dice, press OK or Cancel"));
+let attemptUser2 = parsInt(prompt("Player2 : Roll your dice, press OK or Cancel"));
+
+let diceUser1 = 1 + Math.floor(Math.random() * (6 - 1 + 1));
+let diceUser2 = 1 + Math.floor(Math.random() * (6 - 1 + 1));
+
+let scoreUser1 = 0;
+if (attemptUser1 !== null && diceUser1 % 2 == 0)
+  scoreUser1 = scoreUser1 + diceUser1;
+else if (attemptUser1 !== null && diceUser1 % 2 != 0)
+  scoreUser1 = scoreUser1 - diceUser1;
+
+let scoreUser2 = 0;
+if (attemptUser2 !== null && diceUser2 % 2 == 0)
+  scoreUser2 = scoreUser2 + diceUser2;
+else if (attemptUser2 !== null && diceUser2 % 2 != 0)
+  scoreUser2 = scoreUser2 - diceUser2;
+
+attemptUser1 = parsInt(prompt("Player1 : Roll your dice, press OK or Cancel"));
+attemptUser2 = parsInt(prompt("Player2 : Roll your dice, press OK or Cancel"));
+diceUser1 = 1 + Math.floor(Math.random() * (6 - 1 + 1));
+diceUser2 = 1 + Math.floor(Math.random() * (6 - 1 + 1));
+
+if (attemptUser1 != null && diceUser1 % 2 == 0)
+  scoreUser1 = scoreUser1 + diceUser1;
+else if (attemptUser1 != null && diceUser1 % 2 != 0)
+  scoreUser1 = scoreUser1 - diceUser1;
+
+if (attemptUser2 != null && diceUser2 % 2 == 0)
+  scoreUser2 = scoreUser2 + diceUser2;
+else if (attemptUser2 != null && diceUser2 % 2 != 0)
+  scoreUser2 = scoreUser2 - diceUser2;
+
+let result;
+if (scoreUser1 > scoreUser2) result = "Player1 - WON";
+else if (scoreUser2 > scoreUser1) result = "Player2 - WON";
+else result = "Score is equal";
+
+document.write(`${result}`);
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

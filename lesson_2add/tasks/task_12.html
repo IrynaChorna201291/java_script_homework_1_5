@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 2</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 12</h1>
+					<p>
+						З клавіатури вводиться кількість монет номіналом 2 копійки (5коп, 25коп, 50 коп). Визначити скільки гривень і копійок є у даній сумі.
+
+					</p>
+				</section>
+				<script> 
+
+const coinNumber = parseInt(prompt("Введіть кількість монет номіналом 2 коп"));
+const grivnaCoin = 100;
+const grivnaNumber = Math.floor(coinNumber / grivnaCoin) * 2;
+const pennyNumber = (coinNumber % grivnaCoin) * 2;
+document.write(`
+кількість монет: ${coinNumber} <br>
+гривень: ${grivnaNumber} <br>
+копійок: ${pennyNumber}`);
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

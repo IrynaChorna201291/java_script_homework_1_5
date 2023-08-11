@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 3 add</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 3</h1>
+					<p>
+						// Задача 3. Комп’ютер загадує число від 1 до 10. Двоє користувачів надають свої відповіді. Виграє той, у кого число знаходиться ближче до загаданого комп’ютером числа.
+
+					</p>
+				</section>
+				<script> 
+ const minNumber = 1;
+const maxNumber = 10;
+const compRandomNumber =
+  minNumber + Math.floor(Math.random() * (maxNumber - minNumber + 1));
+console.log(compRandomNumber);
+const firstUserGuessNumber = parseInt(prompt("Введіть число від 1 до 10"));
+const secondUserGuessNumber = parseInt(prompt("Введіть число від 1 до 10"));
+const userDif1 = Math.abs(compRandomNumber - firstUserGuessNumber);
+const userDif2 = Math.abs(compRandomNumber - secondUserGuessNumber);
+if (userDif1 < userDif2)
+  document.write(`рандомне число ${compRandomNumber} <br>
+Виграв перший користувач його число ${firstUserGuessNumber}`);
+else if (userDif1 > userDif2)
+  document.write(`рандомне число ${compRandomNumber} <br>
+Виграв другий користувач його число ${secondUserGuessNumber}`);
+else document.write("нічия");
+	</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

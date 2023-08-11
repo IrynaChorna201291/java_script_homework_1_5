@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 2</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 1</h1>
+					<p>
+						Задача 1. Знайти суму, добуток та частку двох дійсних чисел. Результат вивести у формі таблиці
+					</p>
+				</section>
+				<script> 
+//вводимо необхідні дані
+const numOne = parseInt(prompt("Введіть перше число"));
+const numTwo = parseInt(prompt("Введіть друге число"));
+// //знаходимо результат
+const sum = numOne + numTwo;
+const multiply = numOne * numTwo;
+const div = numOne / numTwo;
+// //виводимо результат
+document.write(`<table border = "2px">`);
+document.write("<thead><tr>");
+document.write("<th>Num one</th>");
+document.write("<th>Num two</th>");
+document.write("<th>Sum</th>");
+document.write("<th>Multiply</th>");
+document.write("<th>Div</th>");
+document.write("</tr></thead>");
+document.write("<tbody><tr>");
+document.write(`<td>${numOne}</td>`);
+document.write(`<td>${numTwo}</td>`);
+document.write(`<td>${sum}</td>`);
+document.write(`<td>${multiply}</td>`);
+document.write(`<td>${div.toFixed(2)}</td>`);
+document.write("</tr></tbody>");
+document.write(`</table>`);
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

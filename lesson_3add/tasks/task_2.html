@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 3 add</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 2</h1>
+					<p>
+						Задача 2. Комп’ютер випадковим чином вибирає початок і кінець проміжку (проміжок повинен знаходитися в межах від 1 до 100). Користувач вводить число і виграє, якщо число знаходиться у цьому проміжку, або розташоване від нього (від лівого або правого краю) не більше ніж на 10.
+
+					</p>
+				</section>
+				<script> 
+
+ const minNumber = 1;
+const maxNumber = 100;
+let randomStartIntervalNumber =
+  minNumber + Math.floor(Math.random() * (maxNumber - minNumber + 1));
+console.log(randomStartIntervalNumber);
+let randomEndIntervalNumber =
+  minNumber + Math.floor(Math.random() * (maxNumber - minNumber + 1));
+console.log(randomEndIntervalNumber);
+
+let startNum = randomStartIntervalNumber;
+let endNum = randomEndIntervalNumber;
+if (startNum > endNum) {
+  let temp = startNum;
+  startNum = endNum;
+  endNum = temp;
+  //варіант 2 {
+  //   startNum = randomEndIntervalNumber;
+  //   endNum = randomStartIntervalNumber;
+  // }
+}
+console.log(`start ${startNum} - end ${endNum}`);
+const userNumber = parseInt(prompt("Введіть число від 1 до 100"));
+if (startNum - 10 <= userNumber && userNumber <= endNum + 10)
+  document.write(`Числовий проміжок від ${startNum} до ${endNum} <br>
+	Загадане число:${userNumber}<br>
+	Ви виграли`);
+else document.write("Ви програли");
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>
